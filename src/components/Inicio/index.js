@@ -8,289 +8,606 @@ export default class Inicio extends Component {
       return (
         <>
         
-
-          <div className="team-bg">
-        <div className="team-area wow fadeInUp section-padding" id="team">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <div className="heading">
-                            <h5>Somos un proyecto con cara y nombre</h5>
-                            <div className="space-10"></div>
-                            <h1>Nuestro Equipo</h1>
+        <div className="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <section id="section-hero" aria-label="section" className="no-top no-bottom vh-100" data-bgimage="url(images/background/bg-shape-1-dark.jpg) bottom">
+                <div className="v-center">
+                    <div className="container">
+                        <div className="row align-items-center mt-3">
+                            <div className="col-md-6">
+                                <div className="spacer-single"></div>
+                                <h6 className="wow fadeInUp" data-wow-delay=".5s"><span className="text-uppercase id-color-2">MINTEARTE MARKET</span></h6>
+                                <div className="spacer-10"></div>
+                                <h1 className="wow fadeInUp" data-wow-delay=".75s">Crea, compra y vende activos digitales.</h1>
+                                <p className="wow fadeInUp lead" data-wow-delay="1s">
+                                    Mintearte la revolucion en NFT`s</p>
+                                <div className="spacer-10"></div>
+                                <a href="explore-2.html" className="btn-main wow fadeInUp lead" data-wow-delay="1.25s">Explorar</a>
+                                <div className="mb-sm-30"></div>
+                            </div>
+                            <div className="col-md-6 xs-hide ">
+                                <img src="images/misc/nft.png" className="lazy img-fluid wow fadeIn" data-wow-delay="1.25s" alt="nft"/>
+                            </div>
                         </div>
-                        <div className="space-60"></div>
                     </div>
                 </div>
-                <div className="row text-center">
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                                <img src="assets/img/vicente.jpg" alt="vicente nires" />
-                            </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>VICENTE NIRES <img src="https://images.emojiterra.com/twitter/v13.0/512px/1f1fa-1f1fe.png" height="25px" alt="bandera uruguay" /></h3>
-                                <div className="space-10"></div>
-                                <h6>CO-FOUNDER</h6>
-                                <p>COO (Chief Operating Officer)<br /><br />
-                                    Creador de BRUTUS BOT y RESPONSABLE de OPERATIVA es UN AMANTE del TRADING y uno de los REFERENTES en la venta P2P en URUGUAY y BRASIL.
-                                </p>
-                            </div>
-                            <div className="space-10"></div>
-                            <div className="single-team-social">
-                                <ul>
-                                    <li><a className="ico-3" href="https://twitter.com/NiresVicente"><i className="fa fa-twitter "></i></a></li>
-                                </ul>
+            </section>
+            <section id="section-intro" className="no-top no-bottom">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6 mb-sm-30">
+                            <div className="feature-box f-boxed style-3">
+                                <i className="wow fadeInUp bg-color-2 i-boxed icon_wallet"></i>
+                                <div className="text">
+                                    <h4 className="wow fadeInUp">Configura tu billetera</h4>
+                                    <p className="wow fadeInUp" data-wow-delay=".25s">Conecta tu billetera favorita desde la parte superior derecha, justo en el boton donde indica conectar billetera</p>
+                                </div>
+                                <i className="wm icon_wallet"></i>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                                <img src="assets/img/manuel.jpg" alt="manuel montijano" />
-                            </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>MANUEL MONTIJANO <img src="https://images.emojiterra.com/twitter/v13.0/512px/1f1ea-1f1f8.png" height="25px" alt="bandera españa" /></h3>
-                                <div className="space-10"></div>
-                                <h6>CO-FOUNDER</h6>
-                                <p>CMO (Chief Marketing Officer)<br /><br />
-                                    Desarrolla la idea de NEGOCIO y RESPONSABLE de la DISTRIBUCIÓN del TOKEN le avala una trayectoria PROFESIONAL de más de 15 años en el MUNDO de las VENTAS.
-                                </p>
-                            </div>
-                            <div className="space-10"></div>
-                            <div className="single-team-social">
-                                <ul>
-                                    <li><a className="ico-3" href="https://twitter.com/BrutusToken"><i className="fa fa-twitter "></i></a></li>
-                                </ul>
+                        <div className="col-lg-4 col-md-6 mb-sm-30">
+                            <div className="feature-box f-boxed style-3">
+                                <i className="wow fadeInUp bg-color-2 i-boxed icon_cloud-upload_alt"></i>
+                                <div className="text">
+                                    <h4 className="wow fadeInUp">Mintea o importa tus NFT's</h4>
+                                    <p className="wow fadeInUp" data-wow-delay=".25s">Accede al menù pagina y mintea ò importa tus propios NFT`s</p>
+                                </div>
+                                <i className="wm icon_cloud-upload_alt"></i>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                                <img src="assets/img/steven.jpg" alt="Steven cabrera TRON" />
-                            </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>STEVEN CABRERA <img src="https://images.emojiterra.com/twitter/v13.0/512px/1f1e8-1f1f4.png" height="25px" alt="bandera colombia" /></h3>
-                                <div className="space-10"></div>
-                                <h6>TRON DEVELOPER</h6>
-                                <p>
-                                    CTO (Chief Technology Officer)<br /><br />
-                                    Creador del TOKEN y desarrolla la WEB con la INTEGRACIÓN de TRONLINK, jovencísimo DESARROLLADOR de CONTRATOS INTELIGENTES especializado en la BLOCKCHAIN de TRON.
-                                </p>
-                            </div>
-                            <div className="space-10"></div>
-                            <div className="single-team-social">
-                                <ul>
-                                    <li><a className="ico-1" href="https://www.youtube.com/channel/UCBImqITHBD_aVzAu-AL8pTw"><i className="fa fa-youtube"></i></a></li>
-                                    <li><a className="ico-2" href="https://github.com/stevenstc"><i className="fa fa-github"></i></a></li>
-                                    <li><a className="ico-3" href="https://twitter.com/steven_Cabr"><i className="fa fa-twitter "></i></a></li>
-                                </ul>
+                        <div className="col-lg-4 col-md-6 mb-sm-30">
+                            <div className="feature-box f-boxed style-3">
+                                <i className="wow fadeInUp bg-color-2 i-boxed icon_tags_alt"></i>
+                                <div className="text">
+                                    <h4 className="wow fadeInUp">Vende tus NFT`s</h4>
+                                    <p className="wow fadeInUp" data-wow-delay=".25s">Escoje tu tipo de venta, la moneda y la red en la que prefieres comercializar tus NFT`s y ponlos a la venta.</p>
+                                </div>
+                                <i className="wm icon_tags_alt"></i>
                             </div>
                         </div>
-                    </div>
-
-
-                </div>
-            </div>
-   
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <div className="heading">
-                        <div className="space-60"></div>
-                            <h5>Nos gusta garantizar los fondos</h5>
-                            <div className="space-10"></div>
-                            <h1>Nuestros Productos Respaldados</h1>
-                        </div>
-                        <div className="space-60"></div>
                     </div>
                 </div>
-                <div className="row text-center">
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                                <a href="/?token"><img src="assets/img/vicente.jpg" alt="vicente nires" /></a>
+            </section>            
+
+            <section id="section-collections" className="no-bottom">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="text-center">
+                                <h2>Mejor Valoradas</h2>
+                                <div className="small-border bg-color-2"></div>
                             </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>BRUT </h3>
-                                <div className="space-10"></div>
-                                <h6>Brutus Token</h6>
+                        </div>
+                        <div id="collection-carousel" className="owl-carousel wow fadeIn">
+
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-1.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-1.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Abstraction</h4></a>
+                                        <span>ERC-192</span>
+                                    </div>
+                                </div>
+                            
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-2.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-2.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Patternlicious</h4></a>
+                                        <span>ERC-61</span>
+                                    </div>
+                                </div>
+                            
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-3.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-3.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Skecthify</h4></a>
+                                        <span>ERC-126</span>
+                                    </div>
+                                </div>
+                            
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-4.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-4.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Cartoonism</h4></a>
+                                        <span>ERC-73</span>
+                                    </div>
+                                </div>
+                            
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-5.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-5.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Virtuland</h4></a>
+                                        <span>ERC-85</span>
+                                    </div>
+                                </div>
+                            
+                                <div className="nft_coll">
+                                    <div className="nft_wrap">
+                                        <a href="collection.html"><img src="images/collections/coll-6.jpg" className="lazy img-fluid" alt=""/></a>
+                                    </div>
+                                    <div className="nft_coll_pp">
+                                        <a href="collection.html"><img className="lazy" src="images/author/author-6.jpg" alt=""/></a>
+                                        <i className="fa fa-check"></i>
+                                    </div>
+                                    <div className="nft_coll_info">
+                                        <a href="collection.html"><h4>Papercut</h4></a>
+                                        <span>ERC-42</span>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div className="space-10"></div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                              <a href="/?staking"><img src="assets/img/manuel.jpg" alt="manuel montijano" /></a>
+                </section>
+
+            <section id="section-items" className="no-bottom">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="text-center">
+                                <h2>Nuevos NFT`s</h2>
+                                <div className="small-border bg-color-2"></div>
                             </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>BRST </h3>
-                                <div className="space-10"></div>
-                                <h6>Brutus Tron Staking</h6>
+                        </div>
+                        <div id="items-carousel" className="owl-carousel wow fadeIn">
+
+      
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="de_countdown" data-year="2021" data-month="9" data-day="16" data-hour="8"></div>
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-1.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="item-details.html">
+                                                <img src="images/items/static-1.jpg" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>Pinky Ocean</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.08 ETH<span>1/20</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>50</span>
+                                            </div>                            
+                                        </div> 
+                                    </div>
+                                </div>                 
+
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-10.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/static-2.jpg" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>Deep Sea Phantasy</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.06 ETH<span>1/22</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>80</span>
+                                            </div>                                 
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="de_countdown" data-year="2021" data-month="9" data-day="14" data-hour="8"></div>
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-11.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/static-3.jpg" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>Rainbow Style</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.05 ETH<span>1/11</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>97</span>
+                                            </div>                                 
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-12.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/static-4.jpg" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>Two Tigers</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.02 ETH<span>1/15</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>73</span>
+                                            </div>                                 
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-9.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/anim-4.webp" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>The Truth</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.06 ETH<span>1/20</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>26</span>
+                                            </div>                                 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="de_countdown" data-year="2021" data-month="9" data-day="20" data-hour="8"></div>
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-2.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/anim-2.webp" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>Running Puppets</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.03 ETH<span>1/24</span>
+                                            </div>    
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>45</span>
+                                            </div>                                  
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                                <div className="d-item">
+                                    <div className="nft__item">
+                                        <div className="author_list_pp">
+                                            <a href="dark-author.html">                                    
+                                                <img className="lazy" src="images/author/author-3.jpg" alt=""/>
+                                                <i className="fa fa-check"></i>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_wrap">
+                                            <a href="dark-item-details.html">
+                                                <img src="images/items/anim-1.webp" className="lazy nft__item_preview" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div className="nft__item_info">
+                                            <a href="dark-item-details.html">
+                                                <h4>USA Wordmation</h4>
+                                            </a>
+                                            <div className="nft__item_price">
+                                                0.09 ETH<span>1/25</span>
+                                            </div>
+                                            <div className="nft__item_action">
+                                                <a href="#">Place a bid</a>
+                                            </div>
+                                            <div className="nft__item_like">
+                                                <i className="fa fa-heart"></i><span>76</span>
+                                            </div>                                 
+                                        </div> 
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div className="space-10"></div>
                         </div>
                     </div>
+                </section>
 
-                    <div className="col-12 col-md-6 col-lg-4">
-                        <div className="single-team">
-                            <div className="single-team-img">
-                              <a href="https://mintearte.tk/"><img src="assets/img/steven.jpg" alt="Steven cabrera TRON" /></a>
+            <section id="section-popular" className="pb-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="text-center">
+                                <h2>Mejores Vendedores</h2>
+                                <div className="small-border bg-color-2"></div>
                             </div>
-                            <div className="space-30"></div>
-                            <div className="single-team-content">
-                                <h3>MTA</h3>
-                                <div className="space-10"></div>
-                                <h6>Mintearte</h6>
-                            </div>
-                            <div className="space-10"></div>
+                        </div>
+                        <div className="col-md-12 wow fadeIn">
+                            <ol className="author_list">
+                                <li>                                    
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">
+                                            <img className="lazy" src="images/author/author-1.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>                                    
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Monica Lucas</a>
+                                        <span>3.2 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-2.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Mamie Barnett</a>
+                                        <span>2.8 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-3.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Nicholas Daniels</a>
+                                        <span>2.5 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-4.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Lori Hart</a>
+                                        <span>2.2 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-5.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Jimmy Wright</a>
+                                        <span>1.9 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-6.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Karla Sharp</a>
+                                        <span>1.6 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-7.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Gayle Hicks</a>
+                                        <span>1.5 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-8.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Claude Banks</a>
+                                        <span>1.3 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-9.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Franklin Greer</a>
+                                        <span>0.9 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-10.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Stacy Long</a>
+                                        <span>0.8 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-11.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Ida Chapman</a>
+                                        <span>0.6 ETH</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="author_list_pp">
+                                        <a href="dark-author.html">                                    
+                                            <img className="lazy" src="images/author/author-12.jpg" alt=""/>
+                                            <i className="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                    <div className="author_list_info">
+                                        <a href="dark-author.html">Fred Ryan</a>
+                                        <span>0.5 eth</span>
+                                    </div>
+                                </li>
+                            </ol>
                         </div>
                     </div>
-
-
                 </div>
-            </div>
+            </section>        
+            <section id="section-category" className="no-top">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="text-center">
+                                <h2>Buscar por categorias</h2>
+                                <div className="small-border bg-color-2"></div>
+                            </div>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".1s">
+                            <a href="explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-image"></i>
+                                <span>Arte</span>
+                            </a>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".2s">
+                            <a href="explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-music"></i>
+                                <span>Musica</span>
+                            </a>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".3s">
+                            <a href="explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-search"></i>
+                                <span>Dominios</span>
+                            </a>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
+                            <a href="dark-explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-globe"></i>
+                                <span>Metaverso</span>
+                            </a>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".5s">
+                            <a href="dark-explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-vcard"></i>
+                                <span>Fotografia</span>
+                            </a>
+                        </div>
+                        <div className="col-md-2 col-sm-4 col-6 mb-sm-30 wow fadeInRight" data-wow-delay=".6s">
+                            <a href="dark-explore.html" className="icon-box style-2 rounded">
+                                <i className="fa fa-th"></i>
+                                <span>Coleccionables</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>     
         </div>
-
-        <div className="faq-area wow fadeInUp" id="faq">
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 text-center">
-                    <div className="heading">
-                        <h5>faq</h5>
-                        <div className="space-10"></div>
-                        <h1>Frequently Asked Questions </h1>
-                    </div>
-                    <div className="space-60"></div>
-                </div>
-                </div>
-                <div className="row">
-                    <div className="col-12 text-center">
-                        <div className="faq-list">
-                            <ul className="nav nav-pills" id="pills-tab">
-                                <li><a className="active" data-toggle="pill" href="#one">Preguntas generales</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="space-50"></div>
-            </div>
-                <div className="tab-content" id="pills-tabContent">
-                    <div className="tab-pane fade show active" id="one">
-                        <div className="container-fluid">
-                            <div className="faq-carousel owl-carousel">
-                                <div className="single-faq">
-                                    <h4>¿Cómo funciona?</h4>
-                                    <div className="space-20"></div>
-                                    <p>En BRUTUS hemos creado un BOT basado principalmente en el BACKTESTING, con el que intentamos predecir movimientos del MERCADO basándonos en COMPORTAMIENTOS anteriores de DIFERENTES CRIPTOMONEDAS.
-                                        De igual manera, el equipo trabaja constantemente desarrollando nuevas técnicas y estrategias INTENTANDO generar GANANCIAS para todos los HOLDERS de la COMUNIDAD.
-                                        </p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿Que rentabilidades OFRECÉIS?</h4>
-                                    <div className="space-20"></div>
-                                    <p>En BRUTUS hacemos TRADING, así que lamentablemente no podemos GARANTIZAR rentabilidades. De igual manera seguimos una estricta gestión del capital, con la que PRETENDEMOS minimizar las pérdidas y POTENCIAR las GANANCIAS, intentando realizar entradas y salidas del MERCADO, utilizando STABLE COINS como moneda BASE.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿El CAPITAL está GARANTIZADO?</h4>
-                                    <div className="space-20"></div>
-                                    <p>No, de igual manera que no podemos garantizar una RENTABILIDAD no podemos GARANTIZAR el CAPITAL, eso sí, lo que sí te GARANTIZAMOS, es que no nos vamos a ir con tu dinero, si estás aquí es porque conoces a alguno de los FUNDADORES del PROYECTO y queremos seguir siendo tu AMIGOS.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿Cuánto me va a costar todo esto?</h4>
-                                    <div className="space-20"></div>
-                                    <p>Como bien sabes, los BOTS de TRADING, NO son económicos y tienen un COSTE FIJO en CONCEPTO de LICENCIA. Nosotros no cobramos ningún tipo de LICENCIA ni SOBRECOSTE. En nuestro caso solo ganamos si tú ganas, cobrando únicamente un 20% de las rentabilidades obtenidas por nuestra OPERATIVA. De cada 100$ rentabilidad generada 80$ serán para la COMUNIDAD y 20$ para el EQUIPO.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿Cuál es la INVERSIÓN MÍNIMA?</h4>
-                                    <div className="space-20"></div>
-                                    <p>Puedes formar parte de la comunidad BRUTUS adquiriendo TOKENS y tu inversión MÍNIMA es de 1 TÍTULO.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿Cuándo PUEDO vender mis TOKENS?</h4>
-                                    <div className="space-20"></div>
-                                    <p>Puedes poner a la venta tus BRUT en el momento que lo desees, lo único que te pedimos es que nos des 15 días, para que la retirada de CAPITAL no AFECTE a nuestra OPERATIVA.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿Por qué no puedo adquirir Brutus Token en ningún EXCHANGE?</h4>
-                                    <div className="space-20"></div>
-                                    <p>Muchos nos hacéis esta pregunta y aquí viene la respuesta, como sabéis el precio de los tokens que cotizan en EXCHANGES depende única y exclusivamente del MERCADO. 
-                                        BRUTUS tiene un respaldo REAL, ya que su valor viene determinado por la UNA sencilla división, CAPITAL TOTAL existente en los DIFERENTES EXCHANGES dividido por la CANTIDAD TOKENS en CIRCULACIÓN, por este motivo, SOLO podrás adquirir tus BRUT, mediante nuestra web.
-                                        </p>
-                                    <div className="space-20"></div>
-                                </div>
-                                <div className="single-faq">
-                                    <h4>¿QUIENES SOMOS?</h4>
-                                    <div className="space-20"></div>
-                                    <p>Como BIEN sabes, Brutus Token, nace como un pequeño PROYECTO de dos AMIGOS, amantes de las CRIPTOMONEDAS, que deciden CREAR un TOKEN, con la INTENCIÓN de acercar el TRADING AUTOMATIZADO a cualquier persona tenga o no conocimiento del mercado de las CRIPTOMONEDAS.</p>
-                                    <div className="space-20"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div className="space-90"></div>
-        </div>
-    </div>
-    <div className="community-area wow fadeInUp section-padding" id="contact">
-        <div className="container">
-            <div className="row">
-                <div className="col-12 text-center">
-                    <div className="heading">
-                        <div className="space-10"></div>
-                        <h1>Nuestra Comunidad </h1>
-                    </div>
-                <div className="space-60"></div>
-                
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-6 col-lg">
-                    <div className="single-community mid-social">
-                        <a className="twitter" href="https://t.me/brutus_comunidad_sr"><i className="fa fa-telegram"></i></a>
-                    </div>
-                </div>
-                <div className="col-6 col-lg">
-                    <div className="single-community mid-social">
-                        <a className="github" href="https://github.com/brutustoken/"><i className="fa fa-github"></i></a>
-                    </div>
-                </div>
-                <div className="col-6 col-lg">
-            
-                    <div className="single-community mid-social">
-                        <a className="whatsapp" href="https://wa.link/nfl9sa"><i className="fa fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div className="col-6 col-lg">
-                    <div className="single-community mid-social">
-                        <a className="youtube" href="https://www.youtube.com/channel/UCKr7p3cwb86oVyt_HF4PvZQ"><i className="fa fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div className="col-6 col-lg">
-                    <div className="single-community mid-social">
-                        <a className="twitter" href="https://twitter.com/BrutusToken"><i className="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <iframe width="100%" height="800" src="https://7db0d14e.sibforms.com/serve/MUIEAIK6boFmZJ016HsTQHdxGR6dnBg2KTVKaBIdPCMiW2o5QbnKjVa0tBRsr7hwz0ZaOdO6AfPSasRUJPnqgbOtki9Xk4fYJ8wTyXkS6QHaoQG7HLhMy1KCCHRXjJFO7lA8fIkwVjOd_0PRRknkospxrFMUxsr4VL7DGpa5BD03iTzePASHMc_GvIW3MpFl8GbfrkHY1byuUXpm" frameborder="0" scrolling="auto" allowfullscreen style={{display: "block",marginLeft: "auto",marginRight: "auto",maxWidth: "100%"}} title="newsteller"></iframe>
-    
-
         </>
       );
   }

@@ -22,9 +22,11 @@ class App extends Component {
         loggedIn: false
       }
     };
+    this.wallet = this.wallet.bind(this);
   }
 
   async componentDidMount() {
+    
     await new Promise(resolve => {
       const tronWebState = {
         installed: !!window.tronWeb,
@@ -81,10 +83,6 @@ class App extends Component {
       // Set default address (foundation address) used for contract calls
       // Directly overwrites the address object if TronLink disabled the
       // function call
-      window.tronWeb.defaultAddress = {
-        hex: window.tronWeb.address.toHex(FOUNDATION_ADDRESS),
-        base58: FOUNDATION_ADDRESS
-      };
 
       window.tronWeb.on("addressChange", () => {
         if (this.state.tronWeb.loggedIn) {
@@ -101,10 +99,29 @@ class App extends Component {
     }
 
     Utils.setTronWeb(window.tronWeb);
+
+    this.wallet();
+
+    setInterval(() => {
+      this.wallet();
+    }, 3*1000);
+    
+  }
+
+  async wallet(){
+    window.tronWeb.trx.getAccount()
+    .then(result => {
+      result = window.tronWeb.address.fromHex(result.address);
+      document.getElementById("login").innerHTML = result.substr(0,4)+"..."+result.substr(-4);
+      console.log(result)
+      return result;
+    })
+    .catch(()=>{
+      document.getElementById("login").innerHTML = "Cargando...";
+    })
   }
 
   render() {
-
 
     var getString = "";
     var loc = document.location.href;
