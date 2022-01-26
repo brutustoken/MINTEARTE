@@ -1,127 +1,189 @@
 import React, { Component } from "react";
 import TronWeb from "tronweb";
 
-import Utils from "../../utils";
+import Web3 from "web3";
+
 import Inicio from "../Inicio";
-import HomeBaner from "../HomeBaner";
-import Home from "../Home";
-import StakingBaner from "../StakingBaner";
-import Staking from "../Staking";
-import TronLinkGuide from "../TronLinkGuide";
-
-
-const FOUNDATION_ADDRESS = "TWiWt5SEDzaEqS6kE5gandWMNfxR2B5xzg";
+import MyWallet from "../Wallet";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      tronWeb: {
+      wallet: 0,
+      address: "Conectar Billetera",
+      red: "",
+      tronlink: {
         installed: false,
-        loggedIn: false
+        loggedIn: false,
+        tronweb: null
+      },
+      metamask:{
+        installed: false,
+        loggedIn: false,
+        web3: null
       }
     };
     this.wallet = this.wallet.bind(this);
+    this.conectar = this.conectar.bind(this);
   }
 
   async componentDidMount() {
-    
-    await new Promise(resolve => {
-      const tronWebState = {
-        installed: !!window.tronWeb,
-        loggedIn: window.tronWeb && window.tronWeb.ready
-      };
 
-      if (tronWebState.installed) {
-        this.setState({
-          tronWeb: tronWebState
-        });
+    /* 
 
-        return resolve();
+    wallet = 0 // tronlink
+    wallet = 1 // metamask
+
+    */
+
+    var wallet = 0;
+
+    if(window.localStorage) {
+
+      if(!window.localStorage.getItem("wallet") ){
+        window.localStorage.setItem("wallet", "0");
+
+      }else{
+        wallet = parseInt( window.localStorage.getItem("wallet") );
+
       }
-
-      let tries = 0;
-
-      const timer = setInterval(() => {
-        if (tries >= 10) {
-
-          const TRONGRID_API = "https://api.trongrid.io";
-
-          window.tronWeb = new TronWeb(
-            TRONGRID_API,
-            TRONGRID_API,
-            TRONGRID_API
-          );
-
-          this.setState({
-            tronWeb: {
-              installed: false,
-              loggedIn: false
-            }
-          });
-          clearInterval(timer);
-          return resolve();
-        }
-
-        tronWebState.installed = !!window.tronWeb;
-        tronWebState.loggedIn = window.tronWeb && window.tronWeb.ready;
-
-        if (!tronWebState.installed) {
-          return tries++;
-        }
-
-        this.setState({
-          tronWeb: tronWebState
-        });
-
-        resolve();
-      }, 100);
-    });
-
-    if (!this.state.tronWeb.loggedIn) {
-      // Set default address (foundation address) used for contract calls
-      // Directly overwrites the address object if TronLink disabled the
-      // function call
-
-      window.tronWeb.on("addressChange", () => {
-        if (this.state.tronWeb.loggedIn) {
-          return;
-        }
-
-        this.setState({
-          tronWeb: {
-            installed: true,
-            loggedIn: true
-          }
-        });
-      });
     }
 
-    Utils.setTronWeb(window.tronWeb);
-
-    this.wallet();
+    this.conectar();
 
     setInterval(() => {
-      this.wallet();
+      this.conectar();
     }, 3*1000);
     
   }
 
+  async conectar(){
+
+    switch (parseInt( window.localStorage.getItem("wallet") )) {
+      case 0:
+
+        window.tronLink.request({method: 'tron_requestAccounts'}).then(()=>{
+          const tronWebState = {
+            installed: !!window.tronWeb,
+            loggedIn: window.tronWeb && window.tronWeb.ready,
+            tronWeb: window.tronWeb
+          };
+    
+          if (tronWebState.installed) {
+            this.setState({
+              red: "(TRON)",
+              tronlink: tronWebState
+            });
+      
+          }
+        })
+        .catch(()=>{
+
+          this.setState({
+            red: "(TRON)",
+            tronlink: {
+              installed: false,
+              loggedIn: false,
+              tronWeb: window.tronWeb
+            }
+          });
+
+
+        })
+
+        window.tronWeb.trx.getAccount()
+        .then(result => {
+          result = window.tronWeb.address.fromHex(result.address);
+          this.setState({
+            red: "(TRON)",
+            address:result
+          })
+        })
+        .catch(()=>{
+          document.getElementById("login").innerHTML = "Cargando...";
+          this.setState({
+            red: "(TRON)",
+            address:"Cargando..."
+          })
+          
+        })
+        
+        break;
+
+      case 1:
+
+        if (typeof window.ethereum !== 'undefined') {           
+          window.ethereum.request({ method: 'eth_requestAccounts' })
+          .then((accounts) => {
+            //console.log(accounts)
+            var web3 = new Web3(window.web3.currentProvider);
+              /*var contractToken = new web3.eth.Contract(
+              abiToken,
+              addressToken
+            );*/
+            this.setState({
+              address: accounts[0],
+              red: "(BTTC)",
+              metamask: {
+                installed: true,
+                loggedIn: true,
+                web3: web3
+              }
+            })
+          })
+          .catch((error) => {
+            console.error(error)
+            this.setState({
+              address:"Cargando...",
+              red: "(BTTC)",
+              metamask: {
+                installed: false,
+                loggedIn: false,
+                web3: null
+              }
+            })   
+          });
+  
+        } else {    
+          this.setState({
+            address:"Cargando...",
+            red: "(BTTC)",
+            metamask: {
+              installed: false,
+              loggedIn: false,
+              web3: null
+            }
+          })         
+             
+        }
+
+        break;
+    
+      default:
+        alert("porfavor selecione una billetera")
+        break;
+    }
+
+
+   
+
+  }
+
   async wallet(){
-    window.tronWeb.trx.getAccount()
-    .then(result => {
-      result = window.tronWeb.address.fromHex(result.address);
-      document.getElementById("login").innerHTML = result.substr(0,4)+"..."+result.substr(-4);
-      console.log(result)
-      return result;
-    })
-    .catch(()=>{
-      document.getElementById("login").innerHTML = "Cargando...";
-    })
+    
   }
 
   render() {
+
+    if(this.state.address === "Cargando..." || this.state.address === "Conectar Billetera"){
+      document.getElementById("login").innerHTML = "Cargando... "+this.state.red;
+    }else{
+      document.getElementById("login").innerHTML = this.state.address.substr(0,3)+"..."+this.state.address.substr(-3)+" "+this.state.red;
+    }
+
+    
 
     var getString = "";
     var loc = document.location.href;
@@ -134,64 +196,15 @@ class App extends Component {
     }
 
     switch (getString) {
-      case "staking": 
-      case "brst":
-      case "BRST": 
-        if (!this.state.tronWeb.installed) return (
-          <>
-            <StakingBaner/>
-            <div className="container">
-              <TronLinkGuide  url={"/?"+getString}/>
-            </div>
-          </>
-          );
-    
-        if (!this.state.tronWeb.loggedIn) return (
-          <>
-            <StakingBaner/>
-            <div className="container">
-              <TronLinkGuide installed url={"/?"+getString}/>
-            </div>
-          </>
-          );
+      case "wallet": 
+      case "Wallet": 
     
         return (
           <>
-            <StakingBaner getString={getString}/>
-            <Staking />
+            <MyWallet/>
           </>
         );
       
-
-      case "brut":
-      case "BRUT":
-      case "token":
-      case "TOKEN":
-        if (!this.state.tronWeb.installed) return (
-          <>
-            <HomeBaner/>
-            <div className="container">
-              <TronLinkGuide />
-            </div>
-          </>
-          );
-    
-        if (!this.state.tronWeb.loggedIn) return (
-          <>
-            <HomeBaner/>
-            <div className="container">
-              <TronLinkGuide installed />
-            </div>
-          </>
-          );
-    
-        return (
-          <>
-            <HomeBaner/>
-            <Home />
-          </>
-        );
-
     
       default:  
 
