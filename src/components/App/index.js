@@ -64,51 +64,54 @@ class App extends Component {
     switch (parseInt( window.localStorage.getItem("wallet") )) {
       case 0:
 
-        window.tronLink.request({method: 'tron_requestAccounts'}).then(()=>{
-          const tronWebState = {
-            installed: !!window.tronWeb,
-            loggedIn: window.tronWeb && window.tronWeb.ready,
-            tronWeb: window.tronWeb
-          };
-    
-          if (tronWebState.installed) {
+        if (typeof window.tronLink !== 'undefined') { 
+
+          window.tronLink.request({method: 'tron_requestAccounts'}).then(()=>{
+            const tronWebState = {
+              installed: !!window.tronWeb,
+              loggedIn: window.tronWeb && window.tronWeb.ready,
+              tronWeb: window.tronWeb
+            };
+      
+            if (tronWebState.installed) {
+              this.setState({
+                red: "(TRON)",
+                tronlink: tronWebState
+              });
+        
+            }
+          })
+          .catch(()=>{
+
             this.setState({
               red: "(TRON)",
-              tronlink: tronWebState
+              tronlink: {
+                installed: false,
+                loggedIn: false,
+                tronWeb: window.tronWeb
+              }
             });
-      
-          }
-        })
-        .catch(()=>{
-
-          this.setState({
-            red: "(TRON)",
-            tronlink: {
-              installed: false,
-              loggedIn: false,
-              tronWeb: window.tronWeb
-            }
-          });
 
 
-        })
-
-        window.tronWeb.trx.getAccount()
-        .then(result => {
-          result = window.tronWeb.address.fromHex(result.address);
-          this.setState({
-            red: "(TRON)",
-            address:result
           })
-        })
-        .catch(()=>{
-          document.getElementById("login").innerHTML = "Cargando...";
-          this.setState({
-            red: "(TRON)",
-            address:"Cargando..."
+
+          window.tronWeb.trx.getAccount()
+          .then(result => {
+            result = window.tronWeb.address.fromHex(result.address);
+            this.setState({
+              red: "(TRON)",
+              address:result
+            })
           })
-          
-        })
+          .catch(()=>{
+            document.getElementById("login").innerHTML = "Cargando...";
+            this.setState({
+              red: "(TRON)",
+              address:"Cargando..."
+            })
+            
+          })
+        }
         
         break;
 

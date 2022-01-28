@@ -131,11 +131,31 @@ contract RandomNumber{
     }
 }
 
-contract misteryBox is RandomNumber, dinamicArray, Ownable{
+contract MarketMintearte is RandomNumber, dinamicArray, Ownable{
 
-    uint256[] public idTokens = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+    struct Arte {
+        uint256 orden;
+        address vendedor;
+        uint256 precio;
+        uint256 idNft;
+        address tokenTRC721;
+        address tokenTRC20;
+        address comprador;
 
-    mapping (address => uint256[]) public entregaNFT;
+    }
+
+    struct Usuario {
+        uint256 tiempoPremium;
+        uint256 importaciones;
+        uint256[] arteAlmacen;
+
+    }
+
+    uint256[] enVenta;
+
+    uint256 tiempoPremium = 30 * 84600;
+
+    mapping(uint256 => uint256) likes;
 
     address public ownerNFTs = 0x55A8d57DFBBCEEBA1C3F39C7953c856c1fCe66A9;
 
