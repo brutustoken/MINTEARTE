@@ -117,7 +117,12 @@ class App extends Component {
 
       case 1:
 
-        if (typeof window.ethereum !== 'undefined') {           
+        if (typeof window.ethereum !== 'undefined') {    
+          await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: '0xC7'}],
+          });
+
           window.ethereum.request({ method: 'eth_requestAccounts' })
           .then((accounts) => {
             //console.log(accounts)
@@ -133,7 +138,9 @@ class App extends Component {
                 installed: true,
                 loggedIn: true,
                 web3: web3
-              }
+              },
+              contract_market: null,
+              contract_token: null
             })
           })
           .catch((error) => {

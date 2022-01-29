@@ -53,16 +53,10 @@ export default class Wallet extends Component {
 
                         <div className="col-lg-3 mb30">
                             <div className="box-url" style={{"cursor":"pointer"}} onClick={()=>{
-                            alert("Seleccionando la red de BTTC en Metamask");
+  
                             if(window.localStorage) {
 
                                 window.localStorage.setItem("wallet", "1");
-                          
-                                if(parseInt( window.localStorage.getItem("wallet")) == 1){
-                                alert( "Billetera de METAMASK en BTTC seleccionada");
-                                }else{
-                                alert( "Error al seleccionar billetera");
-                                }
                                   
                             }else{
                                 alert( "Error al seleccionar billetera");
@@ -76,21 +70,21 @@ export default class Wallet extends Component {
                         </div>
 
                         <div className="col-lg-3 mb30">
-                            <a className="box-url" href="login.html">
+                            <div className="box-url"  style={{"cursor":"pointer"}} onClick={()=>{
+                            
+                            if(window.localStorage) {
+
+                                window.localStorage.setItem("wallet", "2");
+                                    
+                            }else{
+                                alert( "Error al seleccionar billetera");
+                            }
+                            }}>
                                 <span className="box-url-label">BNB</span>
                                 <img src="images/wallet/1.png" alt="" className="mb20" />
                                 <h4>Metamask</h4>
                                 <p>La billetera mas versatil y conociada del mercado, compatible con las principales blockchains.</p>
-                            </a>
-                        </div>
-
-                        <div className="col-lg-3 mb30">
-                            <a className="box-url" href="login.html">
-                                <span className="box-url-label">MATIC</span>
-                                <img src="images/wallet/1.png" alt="" className="mb20" />
-                                <h4>Metamask</h4>
-                                <p>La billetera mas versatil y conociada del mercado, compatible con las principales blockchains.</p>
-                            </a>
+                            </div>
                         </div>
 
                                                        
