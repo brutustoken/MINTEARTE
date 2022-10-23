@@ -2802,7 +2802,7 @@ header a.btn-line {
 }
 
 header a.btn-main i{
-    display: none;
+    /*display: none;*/
 }
 
 .col-right a.btn-main {
